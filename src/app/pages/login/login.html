@@ -1,6 +1,6 @@
-<div class="center-div">
+ <div class="card-container">
 
-  <div class="card small activator">
+  <!-- <div class="card small activator">
     <div class="card-imgage waves-effect waves-block waves-light">
       <img class="activator" src="../../assets/img/login.jpg" >
     </div>
@@ -8,17 +8,17 @@
       <span class="card-title">Login</span>
       <p> Click for reveal  </p>
     </div>
-  </div>
+  </div> -->
     <div class="card-reveal">
       <span class="card-title blue-text text-darken-4">Login<i class="material-icons right">close</i></span>
-      <form #f='ngForm' (submit)='login()'>
+      <form  #f='ngForm' (submit)='login()'>
         <div class='input-field'>
-          <label for="email" class="col-xs-2">Email</label>
           <input [(ngModel)]="user.email" id="email" type="email" class="validate input-field " >
+          <label for="email" class="col-xs-2">Email</label>
         </div>
         <div class="input-field">
-          <label for="password" class="col-xs-2">Password</label>
           <input [(ngModel)]="user.password" id="password"  type="password" class="validateinput-field ">
+          <label for="password" class="col-xs-2">Password</label>
         </div>
         <div class="input-field">
           <span>{{errorMsg}}</span>
@@ -30,7 +30,6 @@
     </div>
 
 </div>
-
 
 
 

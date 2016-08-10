@@ -1,9 +1,11 @@
 import {Component, ElementRef} from '@angular/core';
 import {AuthService} from '../../services/authService';
 import {User} from '../../services/model/user';
+import {MaterializeDirective} from "angular2-materialize";
 @Component({
     selector: 'login',
     providers: [AuthService],
+     directives: [MaterializeDirective],
     templateUrl:'login.html'
 })
 

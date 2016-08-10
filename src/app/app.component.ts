@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {Router, ROUTER_DIRECTIVES} from '@angular/router';
-
+import {MaterializeDirective} from "angular2-materialize";
 
 //services missing
 @Component({
@@ -8,7 +8,7 @@ import {Router, ROUTER_DIRECTIVES} from '@angular/router';
   template:`
       <router-outlet></router-outlet>
     `,
-  directives:[ROUTER_DIRECTIVES]
+  directives:[ROUTER_DIRECTIVES, MaterializeDirective]
 
 })
 export class App{

@@ -11,7 +11,8 @@ import '@angular/common';
 import '@angular/forms';
 import '@angular/http';
 import '@angular/router';
-
+import 'materialize-css/bin/materialize.css'
+import 'materialize-css/bin/materialize.js'
 // AngularClass
 import '@angularclass/webpack-toolkit';
 import '@angularclass/request-idle-callback';
