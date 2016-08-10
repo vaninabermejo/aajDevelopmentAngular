@@ -6,7 +6,7 @@ import {MaterializeDirective} from "angular2-materialize";
 @Component({
 selector:'home-form',
 providers:[AuthService],
-templateUrl:'./app/pages/home/home.html',
+templateUrl:'home.html',
 
 })
 export class HomeComponent{

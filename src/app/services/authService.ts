@@ -9,15 +9,16 @@ var users=[new User('admin@admin', '123'),
 export class AuthService{
   private loggedIn  :boolean=false;
   constructor( private router: Router){
-    this.loggedIn=!!localStorage.getItem('auth_token');
+    this.loggedIn=!!localStorage.getItem('user');
 
   }
   login(event,user){
     event.preventDefault();
+    console.log(user);
     var authUser= users.find(u=>u.email===user.email);
     if(authUser && authUser.password===user.password){
       localStorage.setItem('user', authUser.email);
-      this.router.navigate(['home']);
+      this.router.navigate(['/home']);
       this.loggedIn=true;
       return true;
     }
@@ -34,7 +35,7 @@ export class AuthService{
   }
   logout(){
     localStorage.removeItem('user');
-    this.router.navigate(['Home']);
+    this.router.navigate(['home']);
     this.loggedIn=false;
   }
   isLoggedIn(){

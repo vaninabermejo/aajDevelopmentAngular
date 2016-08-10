@@ -5,10 +5,15 @@ import {tokenNotExpired} from 'angular2-jwt';
 export class AuthGuard implements CanActivate{
   constructor(private router:Router){}
   canActivate(){
-    if(tokenNotExpired){
+    if(ocalStorage.getItem("user")){
       return true;
     }
-    this.router.navigate['/login'];
+    this.router.navigate['login'];
     return false;
-  }
+  //   if(tokenNotExpired){
+  //     return true;
+  //   }
+  //   this.router.navigate['login'];
+  //   return false;
+  // }
 }
